@@ -1,0 +1,47 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock title %}</title>
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="{% static '/normalize.css' %}">
+    <link rel="stylesheet" href="{% static '/setka.css' %}">
+    <link rel="stylesheet" href="{% static '/likely.css' %}">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css">
+    <link rel="stylesheet" href="{% static '/base.css' %}">
+</head>
+<body>
+    <div class="page">
+        <div class="section section_header">
+            <div class="container container_full">
+                <div class="breadcrumbs">
+                    <a class="breadcrumbs__item link link_blue" href="/">Главная</a> {% block navtitle %}{% endblock navtitle %}
+                </div>
+            </div>
+        </div>
+
+        {% block content %}
+        {% endblock content %}
+
+        {% include '_footer.html' %}
+    </div>
+</body>
+
+<script src="//yastatic.net/jquery/1.11.1/jquery.js"></script> <!-- 33 KB -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+<script src="{% static '/likely.js' %}"></script>
+<script src="{% static '/app.js' %}"></script>
+
+</html>
