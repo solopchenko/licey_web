@@ -8,3 +8,6 @@ src/core/migrations/
 
 src/pages/__pycache__/
 src/pages/migrations/
+
+src/staff/__pycache__/
+src/staff/migrations/
