@@ -1,2 +1,10 @@
 
 .idea/
+
+src/app/__pycache__/
+
+src/core/__pycache__/
+src/core/migrations/
+
+src/pages/__pycache__/
+src/pages/migrations/
