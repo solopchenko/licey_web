@@ -16,6 +16,16 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from pages.views import PageView
+
+
 urlpatterns = [
+
+    # Админка
+    #
     url(r'^admin/', admin.site.urls),
+
+    # Страницы
+    #
+    url(r'^(?P<page_url>[/\w-]*)/$', PageView.as_view()),
 ]
